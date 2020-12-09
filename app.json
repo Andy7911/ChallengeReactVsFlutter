@@ -1,0 +1,12 @@
+{
+  "name": "reactvsflutter",
+  "displayName": "reactvsflutter",
+  "expo": {
+    "name": "reactvsflutter",
+    "slug": "reactvsflutter",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
