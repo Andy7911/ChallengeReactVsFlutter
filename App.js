@@ -1,21 +1,34 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import 'react-native-gesture-handler';
+import SignUpScreen from './component/SignUpScreen';
+import CommandScreen from './component/CommandScreen';
+import { createAppContainer } from 'react-navigation';
+import{createStackNavigator} from 'react-navigation-stack';
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+
+
+const stackApp = createStackNavigator({
+SignUpScreen:{
+  screen: SignUpScreen,
+  navigationOptions:()=>({
+    title:'sighup',
+  })
+},
+CommandScreen:{
+  screen: CommandScreen,
+  navigationOptions:()=>({
+    title:'sighup',
+  })
+},
+
+});
+
+const AppContainer = createAppContainer(stackApp)
+
+const App =()=>{
+  return(
+    <AppContainer/>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+export default App;

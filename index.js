@@ -1,4 +1,6 @@
+
 import { registerRootComponent } from 'expo';
+import {AuthContext} from './navigate/AuthProvider';
 
 import App from './App';
 

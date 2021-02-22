@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850438371459",
+    "firebase_url": "https://fluttervsreact-default-rtdb.firebaseio.com",
+    "project_id": "fluttervsreact",
+    "storage_bucket": "fluttervsreact.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850438371459:android:bc84015ee2358da12943b6",
+        "android_client_info": {
+          "package_name": "com.reactvsflutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850438371459-jbpm8fmb2p0eocl9igiv9cpdbltoq1qj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBhdle5AsxbA4HSPqNEwhYuPYLsUGcZVuw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850438371459-jbpm8fmb2p0eocl9igiv9cpdbltoq1qj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
