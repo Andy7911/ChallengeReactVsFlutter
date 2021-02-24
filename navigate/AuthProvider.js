@@ -6,12 +6,14 @@ export const AuthContext = createContext();
 
 export const AuthProvider=({children})=>{
  const [user,setUser] = useState(false);
+ const [panier,setPanier] =useState(false);
 return (
 <AuthContext.Provider
 value={{ 
     user,
     setUser,
-   
+    panier,
+    setPanier,
    login:async(email,password)=>{
         try{
             await auth().signInWithEmailAndPassword(email,password);

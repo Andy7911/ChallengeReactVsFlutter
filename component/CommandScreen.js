@@ -2,6 +2,7 @@ import React, { Component,useContext } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
 import { AuthContext } from '../navigate/AuthProvider';
+import axios from 'axios';
  const CommandScreen=({navigate})=> {
   
   const {logout} =useContext(AuthContext) 
