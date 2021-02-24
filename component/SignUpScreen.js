@@ -21,7 +21,7 @@ class SignUpScreen extends React.Component {
     
   render(){
     const { navigation } = this.props;
-    const{register}=this.context
+    const{register,login}=this.context
   return (
  
      
@@ -55,7 +55,7 @@ class SignUpScreen extends React.Component {
             <Input onChangeText={password=>this.setState({password:password})} />
           </Item>
         </Form>
-        <Button rounded success style={{ marginTop: 20,marginBottom:10 }} onPress={()=>{ register(this.state.email,this.state.password)
+        <Button rounded success style={{ marginTop: 20,marginBottom:10 }} onPress={()=>{ login(this.state.email,this.state.password)
           
         }} block ><Text>Submit</Text></Button>
         <Text style={{textAlign:'center',marginBottom:15}}>Sign up with </Text>
