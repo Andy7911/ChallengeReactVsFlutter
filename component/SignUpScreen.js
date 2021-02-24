@@ -4,9 +4,7 @@ import { StyleSheet, View, Image } from 'react-native';
 import { Text, Item, Input, Form, Container, Header, Content, Label, Button, Icon, StyleProvider, Right } from 'native-base';
 
 import auth from '@react-native-firebase/auth';
-import { AuthContext } from '../navigate/AuthProvider';
 class SignUpScreen extends React.Component { 
-  static contextType = AuthContext;
   constructor(props) {
    
     super(props);
@@ -17,11 +15,25 @@ class SignUpScreen extends React.Component {
     };
   }    
   
-
+ async register(email,password){
+      try{
+      //const navigation = useNavigation();
+      await auth().createUserWithEmailAndPassword(email,password);
+     
+     this.props.navigation.navigate('command')
+      
+      }
+      catch(e){
+          console.log(e);
+      }
+    }
     
   render(){
     const { navigation } = this.props;
-    const{register}=this.context
+/*      const [email,setEmail] = useState();
+     const [password, setPassword]=useState();
+     const [auth,setAuth]= useState(false); */
+  
   return (
  
      
@@ -42,7 +54,7 @@ class SignUpScreen extends React.Component {
           <Item rounded last floatingLabel>
             <Icon type="FontAwesome" name='envelope' style={{ color: 'black' }} />
             <Label>   Email</Label>
-            <Input onChangeText={text=>this.setState({email:text})}  />
+            <Input onChange={(email)=>this.setState(email)}  />
           </Item>
           <Item rounded last floatingLabel>
             <Icon type="FontAwesome" name='user' />
@@ -52,12 +64,10 @@ class SignUpScreen extends React.Component {
           <Item rounded last floatingLabel style={{marginBottom:10}}>
             <Icon type='FontAwesome5' name='key'></Icon>
             <Label>  Password</Label>
-            <Input onChangeText={password=>this.setState({password:password})} />
+            <Input onChange={(password)=>this.setState({password:password})} />
           </Item>
         </Form>
-        <Button rounded success style={{ marginTop: 20,marginBottom:10 }} onPress={()=>{ register(this.state.email,this.state.password)
-          
-        }} block ><Text>Submit</Text></Button>
+        <Button rounded success style={{ marginTop: 20,marginBottom:10 }} onPress={()=>this.register('basela@gmail.com','hyqa3212')} block ><Text>Submit</Text></Button>
         <Text style={{textAlign:'center',marginBottom:15}}>Sign up with </Text>
        <View style={{flexDirection:'row',justifyContent:'space-around'}}> 
          <Button style={styles.btn}><Icon type='FontAwesome5'

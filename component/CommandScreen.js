@@ -1,10 +1,8 @@
-import React, { Component,useContext } from 'react';
+import React, { Component } from 'react';
 import { Image } from 'react-native';
 import { Container, Header, Content, Card, CardItem, Thumbnail, Text, Button, Icon, Left, Body } from 'native-base';
-import { AuthContext } from '../navigate/AuthProvider';
  const CommandScreen=({navigate})=> {
   
-  const {logout} =useContext(AuthContext) 
     return (
         <Container>
         
@@ -37,7 +35,6 @@ import { AuthContext } from '../navigate/AuthProvider';
             </CardItem>
           </Card>
         </Content>
-        <Button onPress={()=>{logout()}}><Text>Press</Text></Button>
       </Container>
     );
   }
